@@ -1,11 +1,8 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Laser : MonoBehaviour
 {
     private float speed = 14f;
-    //private static Camera cam = Camera.main;
-    //private static float rightEdge = cam.transform.position.x + cam.orthographicSize * cam.aspect;
-
     void Update()
     {
         Vector2 rightBound = Camera.main.ViewportToWorldPoint(new Vector2(1, 0));

@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
-
+    public AudioSource audioSource;     // Источник звука
+    public AudioClip laserSound;        // Аудиофайл (звук лазера)
+    public AudioClip deathSound;        // Аудиофайл (звук смерти)
     private BoxCollider2D boxCollider;
     private Camera mainCamera;
     private float minY, maxY;
@@ -12,13 +15,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject laser;
     [SerializeField] private GameObject spawner;
     [SerializeField] private GameObject gameOverText;
+    [SerializeField] private GameObject deathSpaceShip;
 
     void Start()
     {
+        Time.timeScale = 1f;
         boxCollider = GetComponent<BoxCollider2D>();
         mainCamera = Camera.main;
         gameOverText.SetActive(false);
-
+        deathSpaceShip.SetActive(false);
         // Находим границы с помощью коллайдера камеры
         CreateCameraBounds();
     }
@@ -52,18 +57,28 @@ public class PlayerController : MonoBehaviour
         transform.position = potentialPosition;
 
         if (Input.GetKeyDown(KeyCode.Space))
+        {
             Instantiate(laser, shootPos.position, transform.rotation);
+            audioSource.PlayOneShot(laserSound);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Meteor")
         {
+            audioSource.PlayOneShot(deathSound);
             Destroy(gameObject);
             Destroy(spawner);
+            deathSpaceShip.SetActive(true);
             gameOverText.SetActive(true);
             GameObject[] objectsToDestroy = GameObject.FindGameObjectsWithTag("Meteor");
             foreach (GameObject obj in objectsToDestroy)
+            {
+                Destroy(obj);
+            }
+            GameObject[] objectsToDestroy2 = GameObject.FindGameObjectsWithTag("Laser");
+            foreach (GameObject obj in objectsToDestroy2)
             {
                 Destroy(obj);
             }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Meteor : MonoBehaviour
 {
+
     void Update()
     {
        // Уничтожаем, если улетел за левый край
@@ -16,6 +17,7 @@ public class Meteor : MonoBehaviour
         if (collision.gameObject.tag == "Laser")
         {
             Destroy(gameObject);
+
         }
     }
 }
