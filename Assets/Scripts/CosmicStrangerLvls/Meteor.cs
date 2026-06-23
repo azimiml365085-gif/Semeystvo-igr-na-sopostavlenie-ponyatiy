@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Meteor : MonoBehaviour
 {
+    public bool isCorrect = false;
 
     void Update()
     {
@@ -17,6 +19,14 @@ public class Meteor : MonoBehaviour
         if (collision.gameObject.tag == "Laser")
         {
             Destroy(gameObject);
+            if (isCorrect)
+            {
+                GameManagerCS.score += 1;
+            }
+            else
+            {
+                GameManagerCS.score -= 1;
+            }
 
         }
     }

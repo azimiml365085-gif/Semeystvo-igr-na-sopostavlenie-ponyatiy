@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    private float speed = 14f;
+    private float speed = 20f;
     void Update()
     {
         Vector2 rightBound = Camera.main.ViewportToWorldPoint(new Vector2(1, 0));

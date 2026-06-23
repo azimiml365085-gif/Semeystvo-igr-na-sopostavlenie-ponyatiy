@@ -4,6 +4,7 @@ using UnityEngine.Audio;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
+    public float horizontalSpeed = 2f;
     public AudioSource audioSource;     // Источник звука
     public AudioClip laserSound;        // Аудиофайл (звук лазера)
     public AudioClip deathSound;        // Аудиофайл (звук смерти)
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * horizontalSpeed * Time.deltaTime);
         float vertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(0, vertical * speed * Time.deltaTime);
 

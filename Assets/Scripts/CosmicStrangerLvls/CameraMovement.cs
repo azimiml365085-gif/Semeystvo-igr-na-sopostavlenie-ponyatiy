@@ -4,6 +4,6 @@ public class CameraMovement : MonoBehaviour
 {
     void Update()
     {
-        transform.Translate(Vector2.right * 5f * Time.deltaTime);
+        transform.Translate(Vector2.right * 2f * Time.deltaTime);
     }
 }
