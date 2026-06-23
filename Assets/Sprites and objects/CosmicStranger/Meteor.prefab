@@ -167,7 +167,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &-7010762201476291735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a027efde2105d9429c48cca8d941710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CapsuleRandomTextures
-  textures:
-  - {fileID: 2800000, guid: 0263a4e325bdb244daa8678a2d3412c6, type: 3}
-  - {fileID: 2800000, guid: 555197074ca3277478eb519ee8f37076, type: 3}
-  - {fileID: 2800000, guid: e4da8b556cff3844592304464db27f67, type: 3}
+  sprites:
+  - {fileID: -5292603864194216532, guid: 0263a4e325bdb244daa8678a2d3412c6, type: 3}
+  - {fileID: 8898491386425602264, guid: 555197074ca3277478eb519ee8f37076, type: 3}
+  - {fileID: 91167567577187370, guid: e4da8b556cff3844592304464db27f67, type: 3}
+  randomizeOnStart: 1

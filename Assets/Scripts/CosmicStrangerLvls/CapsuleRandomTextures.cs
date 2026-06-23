@@ -1,15 +1,28 @@
 using UnityEngine;
 
-public class CapsuleRandomTextures : MonoBehaviour
+public class CapsuleRandomTexture : MonoBehaviour
 {
-    [SerializeField] private Texture2D[] textures; // Сюда перетащи 3 текстуры
+    [SerializeField] private Sprite[] sprites;
 
-    void Start()
+    // Эта опция позволит тебе выбрать, менять ли текстуру при старте
+    [SerializeField] private bool randomizeOnStart = true;
+
+    void Awake()
     {
-        // Выбираем случайный индекс (0, 1 или 2)
-        int randomIndex = Random.Range(0, textures.Length);
+        if (randomizeOnStart)
+            SetRandomSprite();
+    }
 
-        // Применяем текстуру к компоненту Renderer
-        GetComponent<Renderer>().material.mainTexture = textures[randomIndex];
+    // Этот метод можно вызывать вручную, если нужно
+    public void SetRandomSprite()
+    {
+        if (sprites == null || sprites.Length == 0)
+        {
+            Debug.LogWarning("Нет спрайтов для выбора!", this);
+            return;
+        }
+
+        int randomIndex = Random.Range(0, sprites.Length);
+        GetComponent<SpriteRenderer>().sprite = sprites[randomIndex];
     }
 }
