@@ -26,12 +26,35 @@ public class LevelProgress : MonoBehaviour
         // Убеждаемся, что прогресс не отрицательный
         if (totalDistance <= 0)
         {
-            Debug.LogWarning("EndPoint находится левее или на той же позиции, что и игрок! Проверь сцену.");
             totalDistance = 1f; // Чтобы избежать деления на ноль
         }
 
         // Сбрасываем слайдер на 0
         progressSlider.value = 0f;
+        
+        // Подписываемся на событие изменения значения
+        progressSlider.onValueChanged.AddListener(OnProgressChanged);
+    }
+
+    void OnProgressChanged(float value)
+    {
+        if (value >= 1f)
+        {
+            if (GameManagerCS.score >= 3)
+            {
+                Time.timeScale = 0.5f;
+            }
+            else
+            {
+                Time.timeScale = 0f;
+            }
+        }
+    }
+
+    void OnDestroy()
+    {
+        // Отписываемся, чтобы избежать ошибок
+        progressSlider.onValueChanged.RemoveListener(OnProgressChanged);
     }
 
     void Update()
