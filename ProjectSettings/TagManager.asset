@@ -16,7 +16,7 @@ TagManager:
   - Water
   - UI
   - GameObjs
-  - 
+  - Background
   - 
   - 
   - 
@@ -51,6 +51,10 @@ TagManager:
   - name: New Layer 2
     uniqueID: 795219739
     locked: 0
+  - name: Background
+    uniqueID: 1571273239
+    locked: 0
   m_RenderingLayers:
   - Default
+  - Background
   m_MigratedRenderPipelines: []

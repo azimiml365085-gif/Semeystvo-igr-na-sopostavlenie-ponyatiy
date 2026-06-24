@@ -3,8 +3,8 @@ guid: d024fbcd4d065b646b1bc9eedc0bec40
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8232665879542380749
-    second: CosmicStrangerLvlBackground 1_0
+      213: 7956133667327204330
+    second: CosmicStrangerLvlBackground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,15 +40,15 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 2
-    wrapV: 2
-    wrapW: 2
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
-  spriteMeshType: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CosmicStrangerLvlBackground 1_0
+      name: CosmicStrangerLvlBackground_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc83a98bffd404270800000000000000
-      internalID: 8232665879542380749
+      spriteID: aeb5092ca6dd96e60800000000000000
+      internalID: 7956133667327204330
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CosmicStrangerLvlBackground 1_0: 8232665879542380749
+      CosmicStrangerLvlBackground_0: 7956133667327204330
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
