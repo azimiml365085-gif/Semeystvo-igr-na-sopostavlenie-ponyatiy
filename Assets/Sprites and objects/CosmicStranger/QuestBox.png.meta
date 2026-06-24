@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0263a4e325bdb244daa8678a2d3412c6
+guid: 398851649ffe64c4e84726a5b1a022e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5292603864194216532
-    second: Capsule1_0
+      213: 5636167004271764018
+    second: QuestBox_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Capsule1_0
+      name: QuestBox_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 0
         y: 0
-        width: 228
-        height: 100
+        width: 200
+        height: 153
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cad08d1b3d4ec86b0800000000000000
-      internalID: -5292603864194216532
+      spriteID: 23265685700b73e40800000000000000
+      internalID: 5636167004271764018
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Capsule1_0: -5292603864194216532
+      QuestBox_0: 5636167004271764018
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
