@@ -22,6 +22,9 @@ public class Meteor : MonoBehaviour
             if (isCorrect)
             {
                 GameManagerCS.score += 1;
+                QuestionManager.ChangeText();
+                Debug.Log("Объект с isCorrect=true уничтожен, текст изменен!");
+
             }
             else
             {
