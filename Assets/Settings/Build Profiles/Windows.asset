@@ -30,11 +30,17 @@ MonoBehaviour:
     m_path: Assets/Scenes/Menus/MainMenu.unity
     m_guid: 168906e4bd362a442bd933fe2816d7f7
   - m_enabled: 1
-    m_path: Assets/Scenes/CosmicStranger/CosmicStrangerBase.unity
-    m_guid: 8c9cfa26abfee488c85f1582747f6a02
-  - m_enabled: 1
     m_path: Assets/Scenes/Baskets/BasketsBase.unity
     m_guid: 82a9046e7ec007d419496889f83351ad
+  - m_enabled: 1
+    m_path: Assets/Scenes/LevelEditor/CosmicStrangerLevelEditor.unity
+    m_guid: 798e4283ece4c9d4a9a49208dca4d6ea
+  - m_enabled: 1
+    m_path: Assets/Scenes/CosmicStranger/CosmicStrangerLvlSelect.unity
+    m_guid: ed46aaa97a172e648a9fe98f342b6748
+  - m_enabled: 1
+    m_path: Assets/Scenes/CosmicStranger/CosmicStrangerBase.unity
+    m_guid: 89ea0c444d0c883499b8a07202cfb507
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:

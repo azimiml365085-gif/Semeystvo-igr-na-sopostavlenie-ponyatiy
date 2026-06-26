@@ -52,7 +52,7 @@ public class LoadingManager : MonoBehaviour
 
         // Меняем текст
         if (progressText != null)
-            progressText.text = "Нажми любую кнопку, чтобы начать!";
+            progressText.text = "Нажмите пробел, чтобы начать!";
 
         // Ждём, пока игрок нажмёт кнопку (Update сделает это)
         while (!isLoadingComplete)

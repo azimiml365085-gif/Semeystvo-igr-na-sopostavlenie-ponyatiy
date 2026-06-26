@@ -16,13 +16,19 @@ public class GameManager : MonoBehaviour
     public void Cosmic()
     {
         audioSource.PlayOneShot(clickSound);
-        SceneManager.LoadScene("CosmicStrangerBase");
+        SceneManager.LoadScene("CosmicStrangerLvlSelect");
     }
 
     public void Baskets()
     {
         audioSource.PlayOneShot(clickSound);
         SceneManager.LoadScene("BasketsBase");
+    }
+
+    public void LevelEditor()
+    {
+        audioSource.PlayOneShot(clickSound);
+        SceneManager.LoadScene("CosmicStrangerLevelEditor");
     }
 
     public void MainMenu()
