@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     public void LevelEditor()
     {
         audioSource.PlayOneShot(clickSound);
-        SceneManager.LoadScene("CosmicStrangerLevelEditor");
+        SceneManager.LoadScene("LevelEditorModeSelect");
     }
 
     public void MainMenu()

@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 8898097345548199381}
   - component: {fileID: 1406218930870001625}
   - component: {fileID: 5956183836659424169}
-  - component: {fileID: -2501375859026507562}
   m_Layer: 0
   m_Name: MeteorWithText
   m_TagString: Meteor
@@ -265,19 +264,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meteor
   isCorrect: 0
---- !u!114 &-2501375859026507562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6080764716793336568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03ad0b502c9e41b459a6613e3ec269fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnableObject
-  canBeDeleted: 1
 --- !u!1 &7325109844045680300
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.IO;
 using System;
+using System.Globalization;
 
 public class AnswerButton : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class AnswerButton : MonoBehaviour
     [SerializeField] private GameObject objectToDelete;
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private Text legacyText;
-    [SerializeField] private Toggle isCorrectToggle; // Toggle для выбора правильности
+    [SerializeField] private Toggle isCorrectToggle;
 
     [Header("File Settings")]
     [SerializeField] private string answersFileName = "Answers.txt";
@@ -33,33 +34,24 @@ public class AnswerButton : MonoBehaviour
 
     public void OnButtonClick()
     {
-        // Создаем папку если нужно
         if (!string.IsNullOrEmpty(LevelFolderPath) && !Directory.Exists(LevelFolderPath))
         {
             Directory.CreateDirectory(LevelFolderPath);
         }
 
-        // Получаем данные ДО удаления
         string answerText = inputField != null ? inputField.text : "";
         Vector3 position = objectToDelete != null ? objectToDelete.transform.position : Vector3.zero;
         bool isCorrect = isCorrectToggle != null ? isCorrectToggle.isOn : false;
 
-        // Сохраняем ответ (одна строка)
         SaveAnswer(answerText);
-
-        // Сохраняем позицию (одна строка)
         SavePosition(position);
-
-        // Сохраняем правильность (1 или 0)
         SaveIsCorrect(isCorrect);
 
-        // Выводим в Legacy Text
         if (legacyText != null)
         {
             legacyText.text = answerText;
         }
 
-        // Удаляем объект
         if (objectToDelete != null)
         {
             Destroy(objectToDelete);
@@ -84,7 +76,10 @@ public class AnswerButton : MonoBehaviour
     {
         try
         {
-            string positionString = $"{position.x:F2},{position.y:F2},{position.z:F2}";
+            // Используем InvariantCulture для сохранения с ТОЧКОЙ (а не запятой)
+            string positionString = $"{position.x.ToString("F2", CultureInfo.InvariantCulture)}," +
+                                    $"{position.y.ToString("F2", CultureInfo.InvariantCulture)}," +
+                                    $"{position.z.ToString("F2", CultureInfo.InvariantCulture)}";
             File.AppendAllText(PositionsFilePath, positionString + Environment.NewLine);
         }
         catch (Exception e)

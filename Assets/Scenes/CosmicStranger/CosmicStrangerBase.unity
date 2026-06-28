@@ -119,6 +119,85 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &86793319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 86793320}
+  - component: {fileID: 86793322}
+  - component: {fileID: 86793321}
+  m_Layer: 5
+  m_Name: VictoryText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &86793320
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86793319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1246353142}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 23.69, y: 254}
+  m_SizeDelta: {x: 1537.18, y: 192.06}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &86793321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86793319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.5589782, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 60
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 0
+    m_MaxSize: 154
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 0
+  m_Text: "\u0412\u042B \u041F\u041E\u0411\u0415\u0414\u0418\u041B\u0418!"
+--- !u!222 &86793322
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86793319}
+  m_CullTransparentMesh: 1
 --- !u!1 &110624060
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -376.46}
+  m_AnchoredPosition: {x: 0, y: -376.45996}
   m_SizeDelta: {x: 0, y: -752.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &310310341
@@ -513,7 +592,7 @@ Transform:
   m_GameObject: {fileID: 470062435}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.0713, y: -0.0778, z: 0}
+  m_LocalPosition: {x: 33.8762, y: -0.0778, z: 0}
   m_LocalScale: {x: 0.6987653, y: 0.6987653, z: 0.6987653}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -573,7 +652,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 186.76208, y: 15.362891}
+  m_Size: {x: 123.23565, y: 15.362891}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1520,6 +1599,7 @@ RectTransform:
   - {fileID: 310310340}
   - {fileID: 1473423136}
   - {fileID: 776759660}
+  - {fileID: 86793320}
   - {fileID: 528551564}
   - {fileID: 172628777}
   - {fileID: 702863951}
@@ -1556,7 +1636,7 @@ Transform:
   m_GameObject: {fileID: 1257129264}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100, y: 0, z: 0}
+  m_LocalPosition: {x: 30, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2027,6 +2107,8 @@ MonoBehaviour:
   player: {fileID: 1646830819}
   endPoint: {fileID: 1257129265}
   progressSlider: {fileID: 702863950}
+  gameOverText: {fileID: 776759659}
+  victoryText: {fileID: 86793319}
 --- !u!114 &1774559344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2036,11 +2118,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1774559339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03901ac73dc6180458c43fc54726b1b8, type: 3}
+  m_Script: {fileID: 11500000, guid: b5670b1231fa1884f96c72db0f0500f3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuestionManager
+  m_EditorClassIdentifier: Assembly-CSharp::TextFileReader
   legacyText: {fileID: 1473423137}
-  resourcePath: CosmicStrangerQuestions/Questions
+  relativePath: BaseLevels/CosmicStranger/Questions.txt
 --- !u!1 &1998459563
 GameObject:
   m_ObjectHideFlags: 0

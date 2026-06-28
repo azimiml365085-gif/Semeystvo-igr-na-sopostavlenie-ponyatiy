@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,10 @@ public class LevelProgress : MonoBehaviour
     [SerializeField] private Transform player;        // Трансформ игрока
     [SerializeField] private Transform endPoint;      // Трансформ конечной точки
     [SerializeField] private Slider progressSlider;   // Слайдер для прогресса
+    [SerializeField] private GameObject gameOverText;
+    [SerializeField] private GameObject victoryText;
+    [SerializeField] private GameObject menuPanel;
+
 
     private float startX;    // Стартовая позиция игрока по X
     private float endX;      // Позиция конечной точки по X
@@ -14,6 +19,8 @@ public class LevelProgress : MonoBehaviour
 
     void Start()
     {
+
+        victoryText.SetActive(false);
         // Запоминаем стартовую позицию игрока по X
         startX = player.position.x;
 
@@ -40,12 +47,16 @@ public class LevelProgress : MonoBehaviour
     {
         if (value >= 1f)
         {
-            if (GameManagerCS.score >= 3)
+            if (GameManagerCS.score >= 4)
             {
-                Time.timeScale = 0.5f;
+                menuPanel.SetActive(true);
+                victoryText.SetActive(true);
+                Time.timeScale = 0f;
             }
             else
             {
+                menuPanel.SetActive(true);
+                gameOverText.SetActive(true);
                 Time.timeScale = 0f;
             }
         }

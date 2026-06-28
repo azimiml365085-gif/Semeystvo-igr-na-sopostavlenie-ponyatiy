@@ -9,10 +9,29 @@ public class GameManagerCS : MonoBehaviour
     public Text scoreText;
     public AudioSource audioSource;     // Источник звука
     public AudioClip clickSound;        // Аудиофайл (звук клика)
+    public GameObject menuPanel;
     public void Awake()
     {
         DontDestroyOnLoad(audioSource);
     }
+
+    public void Start()
+    {
+        menuPanel.SetActive(false);
+    }
+
+    public void ShowMenuPanel()
+    {
+        menuPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void HideMenuPanel()
+    {
+        menuPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
     public void MainMenu()
     {
         audioSource.PlayOneShot(clickSound);

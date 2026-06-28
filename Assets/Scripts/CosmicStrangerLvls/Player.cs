@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject spawner;
     [SerializeField] private GameObject gameOverText;
     [SerializeField] private GameObject deathSpaceShip;
+    [SerializeField] private GameObject menuPanel;
 
     void Start()
     {
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
             Destroy(spawner);
             deathSpaceShip.SetActive(true);
             gameOverText.SetActive(true);
+            menuPanel.SetActive(true);
             GameObject[] objectsToDestroy = GameObject.FindGameObjectsWithTag("Meteor");
             foreach (GameObject obj in objectsToDestroy)
             {
